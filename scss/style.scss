@@ -1,0 +1,116 @@
+$font-stack: 'Ubuntu', sans-serif;
+$primary-color: #333;
+$padding: 5em;
+
+%bupper{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+%body-margin{
+	margin: 0 auto;
+	max-width: 160ch;
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+	// outline: solid red 1px;
+}
+body{
+	color: $primary-color;
+	font-family: $font-stack;
+	font-weight: lighter;
+}
+
+h2{
+	text-transform: uppercase;
+}
+
+button{
+	color: #fff;
+	background: #333;
+	padding: .75em 1.5em;
+	border: none;
+}
+
+nav{
+	padding:1.25em 0;
+	@extend %bupper;
+	@extend %body-margin;
+
+	ul{
+		display: flex;
+	}
+
+	li{
+		list-style: none;
+		padding-left: 1em;
+	}
+
+	a{
+		text-decoration: none;
+		opacity: .6;
+		color: $primary-color;
+	}
+
+	a.active{
+		opacity: 1;
+	}
+
+}
+
+.hero{
+	display: flex;
+	color: #fff;
+	background-image:url('../images/hero.png');
+	height: 320px;
+	align-items: center;
+	justify-content: center;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; 
+
+	.content{
+		@extend %bupper;
+		display: inline-block;
+		padding: 1em 2em;
+		background-color: #000;
+	}
+}
+
+.main{
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	gap: 1em;
+	margin: 0 auto;
+	@extend %body-margin;
+
+	.articles > div{
+	  margin: 3em 0;
+	}
+
+	.featured-article{
+		max-width: 96ch;
+	}
+	.row{
+		display: flex;
+		gap: 2em;
+	}
+
+}
+
+.other-articles{
+
+	*{
+		flex-basis: 100%;
+	}
+}
+
+.tree{
+	margin: 3em 0;
+}
+
+
+

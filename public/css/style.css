@@ -1,0 +1,96 @@
+.hero .content, nav {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.main, nav {
+  margin: 0 auto;
+  max-width: 160ch;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #333;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: lighter;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+button {
+  color: #fff;
+  background: #333;
+  padding: 0.75em 1.5em;
+  border: none;
+}
+
+nav {
+  padding: 1.25em 0;
+}
+nav ul {
+  display: flex;
+}
+nav li {
+  list-style: none;
+  padding-left: 1em;
+}
+nav a {
+  text-decoration: none;
+  opacity: 0.6;
+  color: #333;
+}
+nav a.active {
+  opacity: 1;
+}
+
+.hero {
+  display: flex;
+  color: #fff;
+  background-image: url("../images/hero.png");
+  height: 320px;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+}
+.hero .content {
+  display: inline-block;
+  padding: 1em 2em;
+  background-color: #000;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1em;
+  margin: 0 auto;
+}
+.main .articles > div {
+  margin: 3em 0;
+}
+.main .featured-article {
+  max-width: 96ch;
+}
+.main .row {
+  display: flex;
+  gap: 2em;
+}
+
+.other-articles * {
+  flex-basis: 100%;
+}
+
+.tree {
+  margin: 3em 0;
+}
+
+/*# sourceMappingURL=style.css.map */
