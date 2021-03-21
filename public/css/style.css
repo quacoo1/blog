@@ -5,7 +5,8 @@
 
 .main, nav {
   margin: 0 auto;
-  max-width: 160ch;
+  max-width: 125ch;
+  line-height: 1.5;
 }
 
 * {
@@ -24,9 +25,12 @@ h2 {
 }
 
 button {
+  font: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
   color: #fff;
   background: #333;
-  padding: 0.75em 1.5em;
+  padding: 0.8em 1.5em;
   border: none;
 }
 
@@ -53,7 +57,7 @@ nav a.active {
   display: flex;
   color: #fff;
   background-image: url("../images/hero.png");
-  height: 320px;
+  height: 420px;
   align-items: center;
   justify-content: center;
   background-position: center;
@@ -65,13 +69,18 @@ nav a.active {
 .hero .content {
   display: inline-block;
   padding: 1em 2em;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.hero h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+.hero p {
+  font-size: 0.75rem;
+  font-weight: lighter;
 }
 
 .main {
-  display: grid;
-  grid-template-columns: 9fr 3fr;
-  gap: 1em;
   margin: 0 auto;
 }
 .main .articles > div {
@@ -83,6 +92,15 @@ nav a.active {
 .main .row {
   display: flex;
   gap: 2em;
+}
+.main .row > div > *, .main .featured-article > * {
+  margin-bottom: 1em;
+}
+.main .tags {
+  font-size: 0.75em;
+}
+.main .tags span {
+  margin-right: 0.5em;
 }
 
 .other-articles * {

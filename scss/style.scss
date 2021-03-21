@@ -9,7 +9,8 @@ $padding: 5em;
 
 %body-margin{
 	margin: 0 auto;
-	max-width: 160ch;
+	max-width: 125ch;
+	line-height: 1.5;
 }
 
 
@@ -29,9 +30,12 @@ h2{
 }
 
 button{
+	font: $font-stack;
+	text-transform: uppercase;
+	font-size: .8rem;
 	color: #fff;
 	background: #333;
-	padding: .75em 1.5em;
+	padding: .8em 1.5em;
 	border: none;
 }
 
@@ -65,7 +69,7 @@ nav{
 	display: flex;
 	color: #fff;
 	background-image:url('../images/hero.png');
-	height: 320px;
+	height: 420px;
 	align-items: center;
 	justify-content: center;
 	background-position: center; /* Center the image */
@@ -76,14 +80,20 @@ nav{
 		@extend %bupper;
 		display: inline-block;
 		padding: 1em 2em;
-		background-color: #000;
+		background-color: rgba(0,0,0,.75);
+	}
+
+	h1{
+		font-size: 3rem;
+		margin: 1rem 0;
+	}
+	p{
+		font-size: .75rem;
+		font-weight: lighter;
 	}
 }
 
 .main{
-	display: grid;
-	grid-template-columns: 9fr 3fr;
-	gap: 1em;
 	margin: 0 auto;
 	@extend %body-margin;
 
@@ -94,10 +104,23 @@ nav{
 	.featured-article{
 		max-width: 96ch;
 	}
+
 	.row{
 		display: flex;
 		gap: 2em;
 	}
+
+	.row > div > *, .featured-article > *{
+		margin-bottom:1em;
+	}
+
+	.tags{
+		span{
+			margin-right: .5em;
+		}
+		font-size: .75em;
+	}
+
 
 }
 
@@ -111,6 +134,3 @@ nav{
 .tree{
 	margin: 3em 0;
 }
-
-
-
