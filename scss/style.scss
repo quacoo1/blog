@@ -76,6 +76,27 @@ nav{
 
 }
 
+.search-box{
+	padding:2em;
+	border-bottom:solid 3px #333;
+}
+
+.body-content{
+	display: flex;
+}
+
+.main{
+	flex:1;
+}
+
+.side-bar{
+	height: 100vh;
+	position: sticky;
+	top:-3px;
+	flex: 0 0 20ch;
+	border:solid 3px #000;
+}
+
 .hero{
 	@include body-margin(2em,6em);
 	display: flex;
@@ -105,7 +126,7 @@ nav{
 	}
 }
 
-.main{
+.main-content{
 	@include body-margin(2em);
 
 	.articles{

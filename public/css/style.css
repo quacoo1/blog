@@ -53,6 +53,27 @@ nav a.active {
   opacity: 1;
 }
 
+.search-box {
+  padding: 2em;
+  border-bottom: solid 3px #333;
+}
+
+.body-content {
+  display: flex;
+}
+
+.main {
+  flex: 1;
+}
+
+.side-bar {
+  height: 100vh;
+  position: sticky;
+  top: -3px;
+  flex: 0 0 20ch;
+  border: solid 3px #000;
+}
+
 .hero {
   margin: 2em auto 6em auto;
   max-width: 125ch;
@@ -83,27 +104,27 @@ nav a.active {
   font-weight: lighter;
 }
 
-.main {
+.main-content {
   margin: 2em auto 0 auto;
   max-width: 125ch;
   line-height: 1.5;
 }
-.main .articles {
+.main-content .articles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
 }
-.main .articles > div {
+.main-content .articles > div {
   border: solid 3px #000;
   padding: 3em;
 }
-.main .featured-article {
+.main-content .featured-article {
   grid-column: 1/span 3;
 }
-.main .tags {
+.main-content .tags {
   font-size: 0.75em;
 }
-.main .tags span {
+.main-content .tags span {
   margin-right: 0.5em;
 }
 
