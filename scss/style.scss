@@ -90,10 +90,10 @@ nav{
 }
 
 .side-bar{
-	height: 100vh;
+	height: calc(100vh + 3px);
 	position: sticky;
 	top:-3px;
-	flex: 0 0 20ch;
+	flex: 0 0 25ch;
 	border:solid 3px #000;
 }
 
@@ -101,13 +101,14 @@ nav{
 	@include body-margin(2em,6em);
 	display: flex;
 	color: #fff;
-	background-image:url('../images/hero.png');
 	height: 420px;
 	align-items: center;
 	justify-content: center;
-	background-position: center; /* Center the image */
-	background-repeat: no-repeat; /* Do not repeat the image */
-	background-size: cover; 
+	background-image:url('../images/hero.gif');
+	background-color:black;
+	background-size:contain;
+	background-repeat: repeat; /* Do not repeat the image */
+	border: solid 3px lime;
 
 	.content{
 		@extend %bupper;
