@@ -22,17 +22,19 @@
                     <li><a href="">about</a></li>
                     <li><a href="">github</a></li>
                 </ul>
+
+                <button id="toggleSidebar">menu</button>
             </nav>
             
             
-            <!-- <div class="hero">
+            <div class="hero">
                 <div class="content">
                     <h1>Mystic's Blog</h1>
                     <p>A blog about my journey through Computer Science</p>
                 </div>
             </div>
-         -->
-            <div class="main-content">
+        
+            <!-- <div class="main-content">
                 <div class="articles">
                     <h1>recent articles</h1>
                     <div class="featured-article">
@@ -82,11 +84,11 @@
                     </div>
                     
                 </div>
-            </div>
+            </div> -->
            
         </div>
         
-        <div class="side-bar">
+        <div id="sidebar" class="side-bar open">
             <div class="search-box">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input type="text" placeholder="search">
@@ -94,6 +96,26 @@
             
         </div>
     </div> 
+
+    <script>
+        const sidebar = document.querySelector('#sidebar');
+        const toggleSidebar = document.querySelector('#toggleSidebar');
+        const body = document.querySelector('html');
+
+        toggleSidebar.onclick = function(e){
+            e.stopPropagation();
+            sidebar.classList.remove("collapse")
+            sidebar.classList.add("open")
+        }
+
+        body.onclick = function(){
+            sidebar.classList.remove("open")
+            sidebar.classList.add("collapse")
+        }
+
+
+
+    </script>
     
 </body>
 </html>

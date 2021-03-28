@@ -15,6 +15,11 @@ body {
   font-weight: bold;
 }
 
+.side-bar.collapse, .side-bar.open {
+  flex: 0 0 25ch;
+  width: auto;
+}
+
 h2 {
   text-transform: uppercase;
 }
@@ -30,8 +35,9 @@ button {
 }
 
 nav {
+  display: flex;
   position: sticky;
-  top: -3px;
+  top: 0;
   background: #fff;
   border-top: solid 3px #000;
   border-bottom: solid 3px #000;
@@ -51,6 +57,10 @@ nav a {
 }
 nav a.active {
   opacity: 1;
+}
+nav button#toggleSidebar {
+  display: none;
+  margin-left: auto;
 }
 
 .search-box {
@@ -82,15 +92,16 @@ nav a.active {
 }
 
 .side-bar {
-  height: calc(100vh + 3px);
-  position: sticky;
-  top: -3px;
-  flex: 0 0 120px;
+  background: #fff;
   border: solid 3px #000;
+  text-align: right;
+  height: calc(100vh);
+  position: sticky;
+  top: 0;
+  overflow-x: hidden;
 }
-
 .hero {
-  margin: 2em calc(4em + 4ch + 3px) 6em calc(4em + 4ch + 3px);
+  margin: 2em calc(4em + 5ch + 3px) 6em calc(4em + 5ch + 3px);
   line-height: 1.5;
   display: flex;
   color: #fff;
@@ -119,7 +130,7 @@ nav a.active {
 }
 
 .main-content {
-  margin: 2em calc(4em + 4ch + 3px) 0 calc(4em + 4ch + 3px);
+  margin: 2em calc(4em + 5ch + 3px) 0 calc(4em + 5ch + 3px);
   line-height: 1.5;
 }
 .main-content .articles {
@@ -129,7 +140,7 @@ nav a.active {
 }
 .main-content .articles > div {
   border: solid 3px #000;
-  padding: 3em;
+  padding: 1em 2em;
 }
 .main-content .featured-article {
   grid-column: 1/span 3;
@@ -147,6 +158,28 @@ nav a.active {
 
 .tree {
   margin: 3em 0;
+}
+
+@media (max-width: 768px) {
+  nav button#toggleSidebar {
+    display: block;
+    margin-left: auto;
+  }
+
+  .side-bar {
+    position: fixed;
+  }
+  .side-bar.open {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .side-bar.collapse {
+    flex: 0 0 0;
+    width: 0;
+    transition: 0.4s;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
